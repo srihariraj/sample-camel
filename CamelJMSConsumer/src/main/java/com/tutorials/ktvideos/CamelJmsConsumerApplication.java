@@ -1,0 +1,13 @@
+package com.tutorials.ktvideos;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CamelJmsConsumerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CamelJmsConsumerApplication.class, args);
+	}
+
+}
