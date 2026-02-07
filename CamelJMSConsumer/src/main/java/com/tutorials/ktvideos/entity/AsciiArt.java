@@ -25,5 +25,4 @@ public class AsciiArt {
     @Column(columnDefinition = "TEXT")
     private String art;
     private LocalDateTime createdAt = LocalDateTime.now();
-    // getters and setters
 }
