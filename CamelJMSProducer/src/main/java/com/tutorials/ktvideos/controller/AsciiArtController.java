@@ -10,13 +10,10 @@ import com.tutorials.ktvideos.service.AsciiArtProducer;
 @RestController
 @RequestMapping("/ascii")
 public class AsciiArtController {
-
 	private final AsciiArtProducer producer;
-
 	public AsciiArtController(AsciiArtProducer producer) {
 		this.producer = producer;
 	}
-
 	@PostMapping("/send")
 	public String send(@RequestParam String name, @RequestParam String art) {
 		producer.sendAsciiArt(name, art);

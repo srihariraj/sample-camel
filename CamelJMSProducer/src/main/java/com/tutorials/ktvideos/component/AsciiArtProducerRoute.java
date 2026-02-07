@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AsciiArtProducerRoute extends RouteBuilder {
-
     @Override
     public void configure() {
         from("direct:sendToQueue")
