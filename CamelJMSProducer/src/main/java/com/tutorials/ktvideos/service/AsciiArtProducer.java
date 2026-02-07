@@ -6,11 +6,9 @@ import org.springframework.stereotype.Service;
 public class AsciiArtProducer {
 
     private final ProducerTemplate producerTemplate;
-
     public AsciiArtProducer(ProducerTemplate producerTemplate) {
         this.producerTemplate = producerTemplate;
     }
-
     public void sendAsciiArt(String name, String art) {
         // Format: "name|art"
 		String message = name + ":" + art;
