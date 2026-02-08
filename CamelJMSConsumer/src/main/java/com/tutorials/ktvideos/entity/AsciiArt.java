@@ -21,8 +21,11 @@ public class AsciiArt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
+
     @Column(columnDefinition = "TEXT")
     private String art;
+
     private LocalDateTime createdAt = LocalDateTime.now();
 }
