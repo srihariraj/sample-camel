@@ -11,8 +11,11 @@ public class AsciiArtConsumerRoute {
 
 	@Autowired
 	private AsciiArtService service;
+
 	@JmsListener(destination = "${spring.artemis.embedded.queues}")
 	public void receive(String message) {
+
 		service.validateAndSave(message);
-    }
+
+	}
 }
