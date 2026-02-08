@@ -15,10 +15,9 @@ public class AsciiArtService {
     public AsciiArtService(AsciiArtRepository repository) {
         this.repository = repository;
     }
-
     public void validateAndSave(String message) {
-        // Split name and ASCII art from your message if needed
-        // For simplicity, let's assume message format is "name:art"
+
+
 		log.info("Validating message: {}", message);
 		String[] parts = message.split(":");
         String name = parts[0];
