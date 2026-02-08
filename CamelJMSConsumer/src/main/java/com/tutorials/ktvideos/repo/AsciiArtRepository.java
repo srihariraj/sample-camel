@@ -8,4 +8,5 @@ import com.tutorials.ktvideos.entity.AsciiArt;
 @Repository
 public interface AsciiArtRepository extends JpaRepository<AsciiArt, Long> {
 
+    //  built in implementations
 }
