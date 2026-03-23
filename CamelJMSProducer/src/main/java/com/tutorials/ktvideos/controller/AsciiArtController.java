@@ -17,6 +17,7 @@ public class AsciiArtController {
 	@PostMapping("/send")
 	public String send(@RequestParam String name, @RequestParam String art) {
 		producer.sendAsciiArt(name, art);
+		System.out.println("AsciiArtController.send");
 		return "Sent ASCII Art: " + name;
 	}
 }

@@ -1,18 +1,21 @@
 package com.tutorials.ktvideos.service;
-import org.apache.camel.ProducerTemplate;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class AsciiArtProducer {
 
-    private final ProducerTemplate producerTemplate;
-    public AsciiArtProducer(ProducerTemplate producerTemplate) {
-        this.producerTemplate = producerTemplate;
+    private final JmsTemplate jmsTemplate;
+    public AsciiArtProducer(JmsTemplate jmsTemplate) {
+        this.jmsTemplate = jmsTemplate;
+        System.out.println("Constructing AsciiArtProducer");
     }
     public void sendAsciiArt(String name, String art) {
         // Format: "name|art"
 		String message = name + ":" + art;
-        producerTemplate.sendBody("direct:sendToQueue", message);
-        System.out.println("Sent ASCII Art: " + name);
+        log.info("MESSAGE SENT TO QUEUE {}", name+art);// jmsTemplate.convertAndSend("end.user.notify", message);
+
     }
 }

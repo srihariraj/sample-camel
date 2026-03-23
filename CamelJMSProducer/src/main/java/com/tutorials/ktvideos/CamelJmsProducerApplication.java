@@ -8,6 +8,7 @@ public class CamelJmsProducerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CamelJmsProducerApplication.class, args);
+		System.out.println("Hellow");
 	}
 
 }
